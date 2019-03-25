@@ -1,12 +1,42 @@
+import './styles/styles.scss';
 import React from 'react';
+import { AppContainer } from 'react-hot-loader';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from './components/ServiceWorker/serviceWorker';
+import {
+    Route,
+    Switch,
+    HashRouter
+} from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './components/App/App';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+const routes = (
+    <HashRouter>
+        <Switch>
+            <App>
+                <Route path="/" exact component={App} />
+            </App>
+        </Switch>
+    </HashRouter>
+);
+
+const outlet = document.getElementById('root');
+
+const render = () => {
+    ReactDOM.render(
+        <AppContainer>
+            {routes}
+        </AppContainer>,
+        outlet
+    );
+};
+
+render();
+
+// Hot Module Replacement API
+if (module.hot) {
+    module.hot.accept(render);
+}
+
 serviceWorker.unregister();
