@@ -10,12 +10,13 @@ import {
 } from 'react-router-dom';
 
 import App from './components/App/App';
+import LoginPage from './pages/login-page/login-page.jsx';
 
 const routes = (
     <HashRouter>
         <Switch>
             <App>
-                <Route path="/" exact component={App} />
+                <Route path="/" exact component={LoginPage} />
             </App>
         </Switch>
     </HashRouter>
@@ -34,7 +35,6 @@ const render = () => {
 
 render();
 
-// Hot Module Replacement API
 if (module.hot) {
     module.hot.accept(render);
 }
