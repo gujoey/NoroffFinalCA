@@ -1,14 +1,40 @@
 import React from 'react';
 export default class LoginComponent extends React.Component{
+	
+	constructor(props){
+		super(props);
+		this.handleLoginTerm = this.handleLoginTerm.bind(this);
+		
+		this.state = {
+			isUsername: false,
+			isPassword: false
+		}
+	}
+	
+	handleLoginTerm(){
+		const app = this;
+		
+		let username = app.refs.username.value;
+		let password = app.refs.password.value;
+		
+		app.props.validateLoginTerm(username, password);
+	}
+	
 	render(){
+		const app = this;
+		
 		return(
 			<div className="[ login ]">
-				<form className="[ login__form ]">
-					<input className="[ login__input ]" type="text" placeholder="Please enter a username"/><br />
+				<form className="[ login__form ]" ref="loginForm">
+					<label className="login__label" htmlFor="username">Username</label><br/>
+					<input className="[ login__input ]" type="text" name="username" ref="username" placeholder="Username"/><br />
 					<span className="[ login--errors ]">Please enter a correct username</span><br />
-					<input className="[ login__input ]" type="password" placeholder="Please enter a password"/><br />
+					
+					<label className="login__label" htmlFor="password">Password</label><br/>
+					<input className="[ login__input ]" type="password" name="password" ref="password" placeholder="Password"/><br />
 					<span className="[ login--errors ]">Please enter a correct Password</span><br />
-					<button className="[ login__button ]" type="Submit">Submit</button>
+					
+					<button className="[ login__button ]" type="button" onClick={app.handleLoginTerm}>Submit</button>
 				</form>
 			</div>
 		);
