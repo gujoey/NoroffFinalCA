@@ -8,25 +8,22 @@ export default class LoginPage extends React.Component {
 			isUsername: false,
 			isPassword: false
 		}
+		this.validateLogin = this.validateLogin.bind(this);
+		
     }
 	
 	validateLogin(username, password){
 		let app = this;
-		console.log(app);
-		console.log("input username " + username);
-		console.log("input password " + password);
 		
 		if(localStorage.getItem("username") === username && localStorage.getItem("password") === password){
-			alert("welcome back " + username);
+			alert("welcome back " + username); //replace with routing
 			sessionStorage.setItem('AuthToken', 'sa6d456sd4a4ad6s');
 		}
-		else if(localStorage.getItem("username") !== username){
-			alert("enter valid username");
-			//app.setState({isUsername: false});
+		if(localStorage.getItem("username") !== username){
+			app.setState({isUsername: "Please enter a valid username"});
 		}
-		else if(localStorage.getItem("password") !== password){
-			alert("enter valid password");
-			//app.setState({isPassword: false});
+		if(localStorage.getItem("password") !== password){
+			app.setState({isPassword: "Please enter a valid password"});
 		}
 	}
 	
@@ -40,7 +37,12 @@ export default class LoginPage extends React.Component {
 		app.setLoginDetails();
 		
         return (
-			<LoginComponent validateLoginTerm={app.validateLogin}></LoginComponent>
+			<LoginComponent 
+				validateLoginTerm={app.validateLogin}
+				usernameErr={app.state.isUsername}
+				passwordErr={app.state.isPassword}
+				>
+			</LoginComponent>
         );
     }
 }
