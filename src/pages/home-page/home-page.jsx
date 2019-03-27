@@ -101,7 +101,11 @@ export default class HomePage extends React.Component {
         app.createCards();
         return (
 			<div>
-				<NavBar></NavBar>
+				<NavBar
+					home="[ nav-item active ]"
+					about=" [ nav-item ] "
+					contact=" [ nav-item ] "
+				></NavBar>
 				<div className="[ row ]">
 					<div className="[ col-md-12 ]">
 						<h1 className='[ text-center ]'>

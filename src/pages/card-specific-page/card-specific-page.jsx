@@ -1,5 +1,6 @@
 import React from 'react';
-import CardSpecificComponent from './../../components/CardSpecific/Card-Specific-Component'
+import CardSpecificComponent from './../../components/CardSpecific/Card-Specific-Component';
+import NavBar from './../../components/Navigation/Navigation-Component';
 
 export default class CardSpecificPage extends React.Component{
 	constructor(props){
@@ -55,9 +56,16 @@ export default class CardSpecificPage extends React.Component{
 					</CardSpecificComponent>;
 		
 		return(
-			<div className='[ row ]'>
-				<div className='[ col-md-12 ]'>
-					{card}
+			<div>
+				<NavBar
+					home="[ nav-item active ]"
+					about=" [ nav-item ] "
+					contact=" [ nav-item ] "
+				></NavBar>
+				<div className='[ row ]'>
+					<div className='[ col-md-12 ]'>
+						{card}
+					</div>
 				</div>
 			</div>
 		);
