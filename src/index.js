@@ -10,13 +10,15 @@ import {
 } from 'react-router-dom';
 
 import App from './components/App/App';
-import LoginPage from './pages/login-page/login-page.jsx';
+import LoginPage from './pages/login-page/login-page';
+import HomePage from './pages/home-page/home-page';
 
 const routes = (
     <HashRouter>
         <Switch>
             <App>
                 <Route path="/" exact component={LoginPage} />
+                <Route path="/home" exact component={HomePage} />
             </App>
         </Switch>
     </HashRouter>

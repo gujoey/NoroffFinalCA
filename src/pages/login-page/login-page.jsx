@@ -16,8 +16,8 @@ export default class LoginPage extends React.Component {
 		let app = this;
 		
 		if(localStorage.getItem("username") === username && localStorage.getItem("password") === password){
-			alert("welcome back " + username); //replace with routing
 			sessionStorage.setItem('AuthToken', 'sa6d456sd4a4ad6s');
+			app.props.history.push("/home");
 		}
 		if(localStorage.getItem("username") !== username){
 			app.setState({isUsername: "Please enter a valid username"});
