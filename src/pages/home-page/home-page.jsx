@@ -1,6 +1,7 @@
 import React from 'react';
 import HomepageComponent from './../../components/Home/Home-Page-Component';
 import Search from './../../components/Search/Search';
+import NavBar from './../../components/Navigation/Navigation-Component';
 
 
 export default class HomePage extends React.Component {
@@ -99,23 +100,26 @@ export default class HomePage extends React.Component {
         const app = this;
         app.createCards();
         return (
-            <div className="[ row ]">
-                <div className="[ col-md-12 ]">
-                    <h1 className='[ text-center ]'>
-                        Cards
-                    </h1><br/>
-                </div>
-				
-				<div className="[ col-sm-12 ]">
-                    <Search onSearchTerm={app.handleSearchTerm}></Search>
-                </div>
-               
-                <div className="[ col-md-12 ]">
-					<div className="[ row row-eq-height ]">
-                    	{app.state.cards}
+			<div>
+				<NavBar></NavBar>
+				<div className="[ row ]">
+					<div className="[ col-md-12 ]">
+						<h1 className='[ text-center ]'>
+							Cards
+						</h1><br/>
 					</div>
-                </div>
-            </div>
+
+					<div className="[ col-sm-12 ]">
+						<Search onSearchTerm={app.handleSearchTerm}></Search>
+					</div>
+
+					<div className="[ col-md-12 ]">
+						<div className="[ row row-eq-height ]">
+							{app.state.cards}
+						</div>
+					</div>
+				</div>
+			</div>
         );
     }
 }

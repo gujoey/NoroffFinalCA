@@ -5,8 +5,8 @@ export default class CardSpecificPage extends React.Component{
 	constructor(props){
 		super(props);
 		this.state={
-			rickMortyObj:[],
-			characterId: this.props.match.params.id
+			cardObj:[],
+			cardId: this.props.match.params.id
 		}
 	}
 	
@@ -31,13 +31,13 @@ export default class CardSpecificPage extends React.Component{
 	
 	getData(){
 		const app = this;
-		fetch('https://api.magicthegathering.io/v1/cards/'+app.state.characterId)
+		fetch('https://api.magicthegathering.io/v1/cards/'+app.state.cardId)
 		.then(response =>{
 			return response.json()
 		})
 		.then(result =>{
 			app.setState({
-				rickMortyObj: result.card
+				cardObj: result.card
 			})
 		});
 	}
@@ -45,19 +45,19 @@ export default class CardSpecificPage extends React.Component{
 	
 	render(){
 		const app = this;
-		let specificCharacter = <CardSpecificComponent 
-									image={app.state.rickMortyObj.imageUrl}
-									name={app.state.rickMortyObj.name}
-									about={app.state.rickMortyObj.originalText}
-									rarity={app.state.rickMortyObj.rarity}		
-									color={app.state.rickMortyObj.colors}		
-								>
-								</CardSpecificComponent>;
+		let card = <CardSpecificComponent 
+						image={app.state.cardObj.imageUrl}
+						name={app.state.cardObj.name}
+						about={app.state.cardObj.originalText}
+						rarity={app.state.cardObj.rarity}		
+						color={app.state.cardObj.colors}		
+					>
+					</CardSpecificComponent>;
 		
 		return(
 			<div className='[ row ]'>
 				<div className='[ col-md-12 ]'>
-					{specificCharacter}
+					{card}
 				</div>
 			</div>
 		);
