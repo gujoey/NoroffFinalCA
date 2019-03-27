@@ -13,7 +13,6 @@ export default class CardSpecificPage extends React.Component{
 	
 	componentDidMount(){
 		const app = this;
-		app.getData();
 		
 		if(app.loggedinValidation()){
 			app.getData();

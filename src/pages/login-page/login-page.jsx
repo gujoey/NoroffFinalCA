@@ -21,9 +21,13 @@ export default class LoginPage extends React.Component {
 		}
 		if(localStorage.getItem("username") !== username){
 			app.setState({isUsername: "Please enter a valid username"});
+		}else{
+			app.setState({isUsername: false});
 		}
 		if(localStorage.getItem("password") !== password){
 			app.setState({isPassword: "Please enter a valid password"});
+		}else{
+			app.setState({isPassword: false});
 		}
 	}
 	
