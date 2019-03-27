@@ -14,6 +14,7 @@ export default class HomePage extends React.Component {
         }
         this.getData = this.getData.bind(this);
         this.handleSearchTerm = this.handleSearchTerm.bind(this);
+		this.redirectCardSpecific = this.redirectCardSpecific.bind(this);
     }
 
     componentDidMount() {
@@ -60,6 +61,11 @@ export default class HomePage extends React.Component {
 			cardsSearch: true
         },app.createCards());
     }
+	
+	redirectCardSpecific(id){
+		let app = this;
+		app.props.history.push("/card-specific/"+id);
+	}
 
     createCards(){
         const app = this;
@@ -77,6 +83,7 @@ export default class HomePage extends React.Component {
 			if(value.imageUrl){
 				app.state.cards.push(
 					<HomepageComponent
+						redirectCardSpecific={app.redirectCardSpecific}
 						name={value.name}
 						image={value.imageUrl}
 						id={value.id}

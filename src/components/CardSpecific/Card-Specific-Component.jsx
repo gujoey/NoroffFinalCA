@@ -12,6 +12,7 @@ export default class CardSpecificComponent extends React.Component{
 					<h2>{this.props.name}</h2>
 					<p>About: {this.props.about}</p>
 					<p>Rarity: {this.props.rarity}</p>
+					<p>Color: {this.props.color}</p>
 				</div>
 			</div>
 		);

@@ -13,11 +13,24 @@ export default class CardSpecificPage extends React.Component{
 	componentDidMount(){
 		const app = this;
 		app.getData();
+		
+		if(app.loggedinValidation()){
+			app.getData();
+		}else{
+			app.props.history.push("/");
+		}
+	}
+	
+	loggedinValidation(){
+		if (sessionStorage.getItem("AuthToken")){
+			return true;
+		}else{
+			return false;
+		}
 	}
 	
 	getData(){
 		const app = this;
-		console.log(app.state.characterId);
 		fetch('https://api.magicthegathering.io/v1/cards/'+app.state.characterId)
 		.then(response =>{
 			return response.json()
@@ -36,14 +49,14 @@ export default class CardSpecificPage extends React.Component{
 									image={app.state.rickMortyObj.imageUrl}
 									name={app.state.rickMortyObj.name}
 									about={app.state.rickMortyObj.originalText}
-									rarity={app.state.rickMortyObj.rarity}
-									
+									rarity={app.state.rickMortyObj.rarity}		
+									color={app.state.rickMortyObj.colors}		
 								>
 								</CardSpecificComponent>;
 		
 		return(
 			<div className='[ row ]'>
-				<div className='[ col-sm-12 ]'>
+				<div className='[ col-md-12 ]'>
 					{specificCharacter}
 				</div>
 			</div>
