@@ -19,10 +19,10 @@ export default class Search extends React.Component{
 			<div className='[ search ]'>
 				<input 
 					type="text" 
-					ref='searchTerm'
+					ref="searchTerm"
 					onChange={app.handleCharacterSearchTerm}
-					class='form-control search__input'
-					placeholder='Search for a character'
+					className="form-control search__input"
+					placeholder="Search for a card"
 				/>
 			</div>
 		);

@@ -7,10 +7,10 @@ export default class HomePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            rickMortyObj: [],
-			rickMortySerachObj: [],
-			rickMortySearch: false,
-            rickMortyCards: []
+            cardsObj: [],
+			cardsSerachObj: [],
+			cardsSearch: false,
+            cards: []
         }
         this.getData = this.getData.bind(this);
         this.handleSearchTerm = this.handleSearchTerm.bind(this);
@@ -41,23 +41,23 @@ export default class HomePage extends React.Component {
         })
         .then(result => {
             app.setState({
-                rickMortyObj: result.cards
+                cardsObj: result.cards
             });
         });
     }
 
     handleSearchTerm(searchTerm) {
         const app = this;
-        let characterObj = app.state.rickMortyObj;
+        let characterObj = app.state.cardsObj;
 		
         let characters = characterObj.filter((character) => {
             return character.name.indexOf(searchTerm) !== -1;
         });
 		
         app.setState({
-            rickMortyCards: [],
-			rickMortySerachObj: characters,
-			rickMortySearch: true
+            cards: [],
+			cardsSerachObj: characters,
+			cardsSearch: true
         },app.createCards());
     }
 
@@ -65,20 +65,21 @@ export default class HomePage extends React.Component {
         const app = this;
 
 		let rickMortyArray;
-		let search = app.state.rickMortySearch;
+		let search = app.state.cardsSearch;
 		
 		if(!search){
-			rickMortyArray = app.state.rickMortyObj;
+			rickMortyArray = app.state.cardsObj;
 		}else{
-			rickMortyArray = app.state.rickMortySerachObj;
+			rickMortyArray = app.state.cardsSerachObj;
 		}
 		
         rickMortyArray.forEach((value, key) => {
 			if(value.imageUrl){
-				app.state.rickMortyCards.push(
+				app.state.cards.push(
 					<HomepageComponent
 						name={value.name}
 						image={value.imageUrl}
+						id={value.id}
 						key={key}
 					>
 					</HomepageComponent>
@@ -94,7 +95,7 @@ export default class HomePage extends React.Component {
             <div className="[ row ]">
                 <div className="[ col-md-12 ]">
                     <h1 className='[ text-center ]'>
-                        Rick and Morty characters
+                        Cards
                     </h1><br/>
                 </div>
 				
@@ -104,7 +105,7 @@ export default class HomePage extends React.Component {
                
                 <div className="[ col-md-12 ]">
 					<div className="[ row row-eq-height ]">
-                    	{app.state.rickMortyCards}
+                    	{app.state.cards}
 					</div>
                 </div>
             </div>

@@ -27,6 +27,19 @@ export default class LoginPage extends React.Component {
 		}
 	}
 	
+	componentDidMount() {
+        const app = this;
+		if(app.loggedinValidation()){
+			app.props.history.push("/home");
+		}
+    }
+	
+	loggedinValidation(){
+		if (sessionStorage.getItem("AuthToken")){
+			return true;
+		}
+	}
+	
 	setLoginDetails(){
 		localStorage.setItem("username", "user");
 		localStorage.setItem("password", "HelloWorld");

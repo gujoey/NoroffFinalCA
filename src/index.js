@@ -12,6 +12,7 @@ import {
 import App from './components/App/App';
 import LoginPage from './pages/login-page/login-page';
 import HomePage from './pages/home-page/home-page';
+import CardSpecificPage from './pages/card-specific-page/card-specific-page';
 
 const routes = (
     <HashRouter>
@@ -19,6 +20,7 @@ const routes = (
             <App>
                 <Route path="/" exact component={LoginPage} />
                 <Route path="/home" exact component={HomePage} />
+				<Route path="/card-specific/:id" component={CardSpecificPage} />
             </App>
         </Switch>
     </HashRouter>
