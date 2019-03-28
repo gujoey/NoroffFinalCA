@@ -13,6 +13,7 @@ import App from './components/App/App';
 import LoginPage from './pages/login-page/login-page';
 import HomePage from './pages/home-page/home-page';
 import CardSpecificPage from './pages/card-specific-page/card-specific-page';
+import ContactPage from './pages/contact-page/contact-page';
 
 const routes = (
     <HashRouter>
@@ -21,6 +22,7 @@ const routes = (
                 <Route path="/" exact component={LoginPage} />
                 <Route path="/home" exact component={HomePage} />
 				<Route path="/card-specific/:id" component={CardSpecificPage} />
+				<Route path="/contact" component={ContactPage} />
             </App>
         </Switch>
     </HashRouter>
