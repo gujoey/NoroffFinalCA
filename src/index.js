@@ -15,6 +15,7 @@ import HomePage from './pages/home-page/home-page';
 import CardSpecificPage from './pages/card-specific-page/card-specific-page';
 import ContactPage from './pages/contact-page/contact-page';
 import ContactSuccessPage from './pages/contact-page/contact-success-page';
+import AboutPage from './pages/about-page/about-page';
 
 const routes = (
     <HashRouter>
@@ -25,6 +26,7 @@ const routes = (
 				<Route path="/card-specific/:id" component={CardSpecificPage} />
 				<Route path="/contact" component={ContactPage} />
 				<Route path="/contact-success" component={ContactSuccessPage} />
+				<Route path="/about" component={AboutPage} />
             </App>
         </Switch>
     </HashRouter>
