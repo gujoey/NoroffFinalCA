@@ -29,7 +29,7 @@ export default class AboutComponent extends React.Component{
 				<div className="col-sm-12">
 					<br/><br/>
 					<div id="moreInfoTrigger" onClick={app.handleShowMore}>
-						<h3><span>DEFEAT YOUR OPPONENT</span> <i className="fa fa-chevron-down float-right" aria-hidden="true"></i></h3>
+						<h3><span>DEFEAT YOUR OPPONENT</span> <i className={this.props.chevron + " float-right"} aria-hidden="true"></i></h3>
 					</div>
 					<div style={app.props.showHideContent} id="moreInfoContent" className="about-supporting">
 						Each player starts the game with 20 life. Knock your opponent down to 0 life, and you win. The most common way to do this is to summon creatures and attack with them.

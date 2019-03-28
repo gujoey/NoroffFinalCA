@@ -44,6 +44,7 @@ export default class AboutPage extends React.Component {
     render() {
 		let app = this;
 		const style = this.state.showMoreContent ? {display: "block"} : {display: "none"};
+		const chevron = this.state.showMoreContent ? 'fa fa-chevron-up' : 'fa fa-chevron-down';
 		
         return (
 			<div>
@@ -55,6 +56,7 @@ export default class AboutPage extends React.Component {
 				<AboutComponent
 					validateLoginTerm = {app.handleShowMore}
 					showHideContent = {style}
+					chevron = {chevron}
 				></AboutComponent>
 			</div>
         );
