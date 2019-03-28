@@ -57,9 +57,7 @@ export default class CardSpecificPage extends React.Component{
 		return(
 			<div>
 				<NavBar
-					home="[ nav-item active ]"
-					about=" [ nav-item ] "
-					contact=" [ nav-item ] "
+					home="[ navbar__link--active ]"
 				></NavBar>
 				<div className='[ row ]'>
 					<div className='[ col-md-12 ]'>

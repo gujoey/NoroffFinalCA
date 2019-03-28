@@ -1,0 +1,16 @@
+.navbar{
+	position: relative;
+	background-color: $blueviolet;
+	z-index: 3;
+	
+	&__link{
+		color: $white !important;
+		&--active{
+			border-bottom: 1px solid $white;
+		}
+	}
+	
+	&__brand{
+		color: $white !important;
+	}
+}

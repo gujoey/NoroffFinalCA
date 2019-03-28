@@ -47,9 +47,7 @@ export default class AboutPage extends React.Component {
         return (
 			<div>
 				<NavBar
-					home="[ nav-item  ]"
-					about=" [ nav-item active ] "
-					contact=" [ nav-item ] "
+					about=" [ navbar__link--active ] "
 				></NavBar>
 				<AboutComponent
 					validateLoginTerm = {app.handleShowMore}

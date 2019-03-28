@@ -80,9 +80,7 @@ export default class ContactPage extends React.Component {
         return (
 			<div>
 				<NavBar
-					home="[ nav-item  ]"
-					about=" [ nav-item ] "
-					contact=" [ nav-item active ] "
+					contact=" [ navbar__link--active ] "
 				></NavBar>
 		
 				<ContactComponent

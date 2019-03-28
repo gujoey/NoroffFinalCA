@@ -5,6 +5,7 @@ body {
   color: white;
   text-align: center; }
 
+/* CSS Document */
 .loginComponent {
   display: table;
   position: absolute;
@@ -90,4 +91,19 @@ body {
       background-color: white;
       color: black; }
 
-/* CSS Document */
+.contactSuccessComponent {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; }
+  .contactSuccessComponent__container {
+    display: table-cell;
+    vertical-align: middle; }
+
+.contactSuccess {
+  width: 50%;
+  margin: auto;
+  color: white;
+  text-align: center; }
