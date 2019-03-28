@@ -15,11 +15,11 @@ export default class HomepageComponent extends React.Component{
 	
 	render(){
 		return(
-			<div className='[ col-md-4 pb-4 ]'>
-				<div className='[ column ]'>
-					<h3>Name: {this.props.name}</h3>
-					<img className="img-responsive" src={this.props.image} alt={this.props.name}/><br/>
-					<button type="button" onClick={this.handleCardSpecificTerm}>More Info</button>
+			<div className='[ col-md-4 d-flex flex-column  ]'>
+				<div className='[ column d-flex flex-column ]'>
+					<h3 className="[ text-center ]">{this.props.name}</h3>
+					<img className="[ column__image ]" src={this.props.image} alt={this.props.name}/><br/>
+					<button className="[ column__button align-self-end ]" type="button" onClick={this.handleCardSpecificTerm}>More Info</button>
 				</div>
 			</div>
 		);
