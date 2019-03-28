@@ -1,8 +1,26 @@
+body {
+  background-color: blueviolet; }
+
+.header {
+  color: white;
+  text-align: center; }
+
+.loginComponent {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; }
+  .loginComponent__container {
+    display: table-cell;
+    vertical-align: middle; }
+
 .login {
   width: 350px;
   margin: auto; }
   .login__form {
-    border: 2px solid aquamarine;
+    border: 2px solid blueviolet;
     border-radius: 5px;
     background-color: white;
     padding: 15px;
@@ -10,7 +28,7 @@
     margin-top: 15px;
     font-size: 20px; }
   .login__input {
-    border: 2px solid aquamarine;
+    border: 2px solid blueviolet;
     width: 100%;
     height: 75px;
     padding: 15px; }
@@ -18,10 +36,58 @@
     font-size: 15px;
     color: red; }
   .login__button {
-    background-color: aquamarine;
-    border-color: aquamarine;
+    background-color: blueviolet;
+    border-color: blueviolet;
     width: 100%;
-    height: 75px; }
+    height: 75px;
+    color: white; }
     .login__button:hover {
-      border: 3px solid aquamarine;
-      background-color: white; }
+      border: 3px solid blueviolet;
+      background-color: white;
+      color: black; }
+
+.contactComponent {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; }
+  .contactComponent__container {
+    display: table-cell;
+    vertical-align: middle; }
+
+.contact {
+  width: 50%;
+  margin: auto; }
+  .contact__form {
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+    background-color: white;
+    padding: 15px;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 20px; }
+  .contact__input {
+    border: 2px solid blueviolet;
+    width: 100%;
+    height: 50px;
+    padding: 15px; }
+    .contact__input--message {
+      height: 150px;
+      width: 100%; }
+  .contact__error {
+    font-size: 15px;
+    color: red; }
+  .contact__button {
+    background-color: blueviolet;
+    border-color: blueviolet;
+    width: 100%;
+    height: 50px;
+    color: white; }
+    .contact__button:hover {
+      border: 3px solid blueviolet;
+      background-color: white;
+      color: black; }
+
+/* CSS Document */
