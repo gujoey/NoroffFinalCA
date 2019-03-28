@@ -54,6 +54,9 @@ export default class ContactPage extends React.Component {
 		}else{
 			app.setState({isPhone: false});
 		}
+		
+		//redirect after validation
+		app.props.history.push("/contact-success");
 	}
 	
 	componentDidMount() {
