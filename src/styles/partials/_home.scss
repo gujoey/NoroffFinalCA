@@ -6,6 +6,16 @@
 	margin: auto;
 	margin-top: 30px;
 	border-radius: 4px;
+	
+	&__header{
+		font-family: $heading;
+		text-align: center;
+		color: $darkgrey;
+		&--white{
+			color: $white;
+		}
+	}
+	
 	&__button{
 		background-color: $blueviolet;
 		border-color: $blueviolet;
@@ -13,6 +23,8 @@
 		height: 75px;
 		color: $white;
 		transition: 0.3s;
+		font-family: $elements;
+		font-size: 20px;
 		&:hover{
 			border: 3px solid $blueviolet;
 			background-color: $white;

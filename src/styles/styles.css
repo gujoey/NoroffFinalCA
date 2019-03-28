@@ -128,4 +128,29 @@ body {
   color: white;
   text-align: center; }
 
+.column {
+  background-color: white !important;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 4px; }
+  .column__button {
+    background-color: blueviolet;
+    border-color: blueviolet;
+    width: 100%;
+    height: 75px;
+    color: white;
+    transition: 0.3s; }
+    .column__button:hover {
+      border: 3px solid blueviolet;
+      background-color: white;
+      color: black; }
+  .column__image {
+    display: block;
+    margin: 15px auto auto auto;
+    max-width: 100%;
+    height: auto; }
+
 /* CSS Document */

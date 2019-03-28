@@ -2,6 +2,9 @@
 	position: relative;
 	background-color: $blueviolet;
 	z-index: 3;
+	font-family: $navigation;
+	font-size: 20px;
+
 	
 	&__link{
 		transition: 0.3s;

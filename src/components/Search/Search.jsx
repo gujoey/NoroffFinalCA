@@ -16,12 +16,12 @@ export default class Search extends React.Component{
 		const app = this;
 		
 		return(
-			<div className='[ search ]'>
+			<div className='[ searchComponent ]'>
 				<input 
 					type="text" 
 					ref="searchTerm"
 					onChange={app.handleCharacterSearchTerm}
-					className="form-control search__input"
+					className="form-control searchComponent__input"
 					placeholder="Search for a card"
 				/>
 			</div>

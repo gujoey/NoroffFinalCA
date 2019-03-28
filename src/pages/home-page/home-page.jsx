@@ -107,7 +107,7 @@ export default class HomePage extends React.Component {
 				
 				<div className="[ row ]">
 					<div className="[ col-md-12 ]">
-						<h1 className='[ header ]'>
+						<h1 className='[ column__header column__header--white ]'>
 							Cards
 						</h1><br/>
 					</div>
