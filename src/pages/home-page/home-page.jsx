@@ -104,9 +104,10 @@ export default class HomePage extends React.Component {
 				<NavBar
 					home="[ navbar__link--active ]"
 				></NavBar>
+				
 				<div className="[ row ]">
 					<div className="[ col-md-12 ]">
-						<h1 className='[ text-center ]'>
+						<h1 className='[ header ]'>
 							Cards
 						</h1><br/>
 					</div>

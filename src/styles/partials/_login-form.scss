@@ -41,6 +41,7 @@
 		width: 100%;
 		height: 75px;
 		color: $white;
+		transition: 0.3s;
 		&:hover{
 			border: 3px solid $blueviolet;
 			background-color: $white;

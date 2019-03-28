@@ -4,13 +4,22 @@
 	z-index: 3;
 	
 	&__link{
+		transition: 0.3s;
 		color: $white !important;
+		&:hover{
+			color: $black !important;
+			border-color: $black !important;
+		}
 		&--active{
 			border-bottom: 1px solid $white;
 		}
 	}
 	
 	&__brand{
+		transition: 0.3s;
 		color: $white !important;
+		&:hover{
+			color: $black !important;
+		}
 	}
 }
