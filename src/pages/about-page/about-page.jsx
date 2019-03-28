@@ -3,6 +3,28 @@ import NavBar from './../../components/Navigation/Navigation-Component'
 import AboutComponent from './../../components/About/About-Component';
 
 export default class AboutPage extends React.Component {
+	constructor(props){
+		super(props);
+		
+		this.state = {
+			showMoreContent: false
+		}
+		
+		this.handleShowMore = this.handleShowMore.bind(this);
+	}
+	
+	handleShowMore(){
+		let app = this;
+		
+		if(app.state.showMoreContent){
+			app.setState({showMoreContent: false});
+			console.log(false);
+		}else{
+			app.setState({showMoreContent: true});
+			console.log(true);
+		}	
+	}
+	
 	componentDidMount() {
 		const app = this;
 		if(!app.loggedinValidation()){
@@ -20,7 +42,9 @@ export default class AboutPage extends React.Component {
 	
 
     render() {
-		let app = this;		
+		let app = this;
+		const style = this.state.showMoreContent ? {display: "block"} : {display: "none"};
+		
         return (
 			<div>
 				<NavBar
@@ -28,7 +52,10 @@ export default class AboutPage extends React.Component {
 					about=" [ nav-item active ] "
 					contact=" [ nav-item ] "
 				></NavBar>
-				<AboutComponent></AboutComponent>
+				<AboutComponent
+					validateLoginTerm = {app.handleShowMore}
+					showHideContent = {style}
+				></AboutComponent>
 			</div>
         );
     }
