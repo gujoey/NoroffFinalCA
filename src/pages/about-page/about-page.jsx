@@ -18,10 +18,8 @@ export default class AboutPage extends React.Component {
 		
 		if(app.state.showMoreContent){
 			app.setState({showMoreContent: false});
-			console.log(false);
 		}else{
 			app.setState({showMoreContent: true});
-			console.log(true);
 		}	
 	}
 	
