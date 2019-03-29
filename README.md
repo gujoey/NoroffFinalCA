@@ -1,4 +1,4 @@
-# React app
+# React card game app
 This is a [React](https://reactjs.org/) app that displays cards from a card game API. The application has a login screen, and in order to accsess the app you have to login in with these details:    
 
 **Username:** user  
