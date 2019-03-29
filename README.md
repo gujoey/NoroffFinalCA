@@ -6,7 +6,7 @@ This is a [React](https://reactjs.org/) app that displays cards from a card game
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[Install](#install) | [Scripts](#available-scripts | [Learn more](#learn-more) 
+[Install](#install) | [Scripts](#available-scripts) | [Learn more](#learn-more) 
 ***
 
 # Install
