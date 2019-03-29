@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Eagle+Lake|Lato|Raleway:500");
 body {
   background-color: blueviolet; }
 
@@ -8,7 +9,9 @@ body {
 .navbar {
   position: relative;
   background-color: blueviolet;
-  z-index: 3; }
+  z-index: 3;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px; }
   .navbar__link {
     transition: 0.3s;
     color: white !important; }
@@ -68,7 +71,7 @@ body {
 .contactComponent {
   display: table;
   position: absolute;
-  margin-top: 65px;
+  margin-top: 80px;
   top: 0;
   left: 0;
   height: 100%;
@@ -136,13 +139,21 @@ body {
   margin: auto;
   margin-top: 30px;
   border-radius: 4px; }
+  .column__header {
+    font-family: "Eagle Lake", cursive;
+    text-align: center;
+    color: #343434; }
+    .column__header--white {
+      color: white; }
   .column__button {
     background-color: blueviolet;
     border-color: blueviolet;
     width: 100%;
     height: 75px;
     color: white;
-    transition: 0.3s; }
+    transition: 0.3s;
+    font-family: "Lato", sans-serif;
+    font-size: 20px; }
     .column__button:hover {
       border: 3px solid blueviolet;
       background-color: white;
@@ -152,5 +163,36 @@ body {
     margin: 15px auto auto auto;
     max-width: 100%;
     height: auto; }
+
+.searchComponent__input {
+  padding-left: 25px !important;
+  height: 75px;
+  font-size: 25px;
+  font-family: "Eagle Lake", cursive; }
+
+.cardSpecificComponent {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: 30px; }
+  .cardSpecificComponent__container {
+    display: table-cell;
+    vertical-align: middle; }
+
+.cardSpeficColumn {
+  width: 50%;
+  margin: auto;
+  background-color: white;
+  border-radius: 4px;
+  padding: 15px;
+  text-align: center;
+  font-family: "Lato", sans-serif; }
+  .cardSpeficColumn__img {
+    margin-bottom: 15px; }
+  .cardSpeficColumn__header {
+    font-family: "Eagle Lake", cursive; }
 
 /* CSS Document */

@@ -1,0 +1,32 @@
+.cardSpecificComponent{
+	display: table;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	margin-top: 30px;
+	
+	&__container{
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+.cardSpeficColumn{
+	width: 50%;
+	margin: auto;
+	background-color: $white;
+	border-radius: 4px;
+	padding: 15px;
+	text-align: center;
+	font-family: $content;
+	
+	&__img{
+		margin-bottom: 15px;
+	}
+	
+	&__header{
+		font-family: $heading;
+	}
+}

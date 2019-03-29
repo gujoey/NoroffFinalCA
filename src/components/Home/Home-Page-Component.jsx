@@ -18,7 +18,7 @@ export default class HomepageComponent extends React.Component{
 			<div className='[ col-md-4 d-flex flex-column ]'>
 				<div className='[ column d-flex flex-column ]'>
 					<h1 className="[ column__header ]">{this.props.name}</h1>
-					<img className="[ column__image ]" src={this.props.image} alt={this.props.name}/><br/>
+					<img className="[ column__image align-self-end ]" src={this.props.image} alt={this.props.name}/><br/>
 					<button className="[ column__button align-self-end ]" type="button" onClick={this.handleCardSpecificTerm}>More Info</button>
 				</div>
 			</div>

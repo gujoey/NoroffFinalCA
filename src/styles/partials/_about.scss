@@ -1,0 +1,24 @@
+.aboutComponent{
+	margin-bottom: 15px;
+}
+
+.aboutColumn{
+	color: $white;
+	font-family: $content;
+	
+	&__header{
+		font-family: $heading;
+		&--collapsable{
+			margin-top: 3px;
+		}
+	}
+	
+	&__showMore{
+		border: 2px solid $white;
+		padding: 10px;
+	}
+	
+	&__chevron{
+		margin-top: 5px;
+	}
+}

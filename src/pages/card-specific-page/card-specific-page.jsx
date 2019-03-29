@@ -45,25 +45,19 @@ export default class CardSpecificPage extends React.Component{
 	
 	render(){
 		const app = this;
-		let card = <CardSpecificComponent 
-						image={app.state.cardObj.imageUrl}
-						name={app.state.cardObj.name}
-						about={app.state.cardObj.originalText}
-						rarity={app.state.cardObj.rarity}		
-						color={app.state.cardObj.colors}		
-					>
-					</CardSpecificComponent>;
 		
 		return(
 			<div>
-				<NavBar
-					home="[ navbar__link--active ]"
-				></NavBar>
-				<div className='[ row ]'>
-					<div className='[ col-md-12 ]'>
-						{card}
-					</div>
-				</div>
+				<NavBar home="[ navbar__link--active ]"></NavBar>
+				
+				<CardSpecificComponent 
+					image={app.state.cardObj.imageUrl}
+					name={app.state.cardObj.name}
+					about={app.state.cardObj.originalText}
+					rarity={app.state.cardObj.rarity}		
+					color={app.state.cardObj.colors}		
+				>
+				</CardSpecificComponent>
 			</div>
 		);
 	}
