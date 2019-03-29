@@ -1,6 +1,27 @@
+# React app
+This is a [React](https://reactjs.org/) app that displays cards from a card game API. The application has a login screen, and in order to accsess the app you have to login in with these details:    
+
+**Username:** user  
+**Password:** HelloWorld
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+[Install](#install) | [Scripts](#available-scripts) 
+***
+
+# Install
+In order to run this project you will have to have [node.js](https://nodejs.org/en/) installed. You can download it from [here](https://nodejs.org/en/).
+
+Clone this repository and ```cd``` into it through your terminal.
+
+Inside the project root directory, install the project using ```npm install```
+
+After the project is installed you can run ```npm start``` to run the project in development mode.
+If you want to run the project in production mode, use the command ```npm run build```
+
+See [available scripts](#available-scripts) to see the what commands you can use in this project.
+
+# Available Scripts
 
 In the project directory, you can run:
 
