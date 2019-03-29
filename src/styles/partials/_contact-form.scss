@@ -10,11 +10,32 @@
 		display: table-cell;
 		vertical-align: middle;
 	}
+	&__header{
+		font-family: $heading;
+		color: $white;
+		text-align: center;
+	}
 }
 
 .contact{
 	width: 50%;
 	margin: auto;
+	margin-bottom: 15px;
+	font-family: $content;
+	
+	@media only screen and (min-width: 614px) and (max-width: 1153px){
+		width: 70%;
+	}
+	
+	@media only screen and (max-width: 750px){
+		width: 95%;
+	}
+	
+	&__paragraph{
+		color: $grey;
+	}
+	
+	
 	&__form{
 		border: 2px solid $blueviolet;
 		border-radius: 5px;
@@ -33,11 +54,15 @@
 			height: 150px;
 			width: 100%;
 		}
+		&--required{
+			color: $red;
+		}
 	}
 	&__error{
 		font-size: 15px;
 		color: red;
 	}
+	
 	&__button{
 		background-color: $blueviolet;
 		border-color: $blueviolet;
@@ -45,6 +70,7 @@
 		height: 50px;
 		color: $white;
 		transition: 0.3s;
+		font-family: $elements;
 		&:hover{
 			border: 3px solid $blueviolet;
 			background-color: $white;

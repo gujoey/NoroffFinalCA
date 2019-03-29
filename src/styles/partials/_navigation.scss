@@ -21,6 +21,7 @@
 	&__brand{
 		transition: 0.3s;
 		color: $white !important;
+		font-family: $heading;
 		&:hover{
 			color: $black !important;
 		}

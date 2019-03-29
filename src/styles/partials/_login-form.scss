@@ -16,6 +16,7 @@
 .login{
 	width: 350px;
 	margin: auto;
+	font-family: $content;
 	&__form{
 		border: 2px solid $blueviolet;
 		border-radius: 5px;
@@ -42,6 +43,7 @@
 		height: 75px;
 		color: $white;
 		transition: 0.3s;
+		font-family: $elements;
 		&:hover{
 			border: 3px solid $blueviolet;
 			background-color: $white;

@@ -6,7 +6,7 @@
 	height: 100%;
 	width: 100%;
 	margin-top: 30px;
-	
+	margin-right: -15px;
 	&__container{
 		display: table-cell;
 		vertical-align: middle;
@@ -16,11 +16,21 @@
 .cardSpeficColumn{
 	width: 50%;
 	margin: auto;
+	color: $darkgrey;
 	background-color: $white;
 	border-radius: 4px;
 	padding: 15px;
+	padding-top: 30px;
 	text-align: center;
 	font-family: $content;
+	
+	@media only screen and (min-width: 614px) and (max-width: 1153px){
+		width: 70%;
+	}
+	
+	@media only screen and (max-width: 614px){
+		width: 90%;
+	}
 	
 	&__img{
 		margin-bottom: 15px;

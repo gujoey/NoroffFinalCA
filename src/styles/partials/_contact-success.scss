@@ -16,4 +16,9 @@
 	margin: auto;
 	color: $white;
 	text-align: center;
+	font-family: $content;
+	
+	&__header{
+		font-family: $heading;
+	}
 }
