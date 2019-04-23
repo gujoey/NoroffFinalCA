@@ -36,7 +36,7 @@ export default class ContactPage extends React.Component {
 		}
 		
 		//validate email input
-		let regExEmail = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,4}$/;
+		let regExEmail = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{1,63}$/;
 
 		if (!regExEmail.test(contactInput.email)){
 			app.setState({isEmail: "Please enter a valid e-mail adress"});

@@ -37,7 +37,7 @@ export default class HomePage extends React.Component {
 
     getData() {
         const app = this;
-        fetch('https://api.magicthegathering.io/v1/cards')
+        fetch("https://api.magicthegathering.io/v1/cards")
         .then(response => {
             return response.json()
         })
@@ -53,14 +53,14 @@ export default class HomePage extends React.Component {
         let characterObj = app.state.cardsObj;
 		
         let characters = characterObj.filter((character) => {
-            return character.name.indexOf(searchTerm) !== -1;
+            return character.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
         });
 		
         app.setState({
             cards: [],
 			cardsSerachObj: characters,
 			cardsSearch: true
-        },app.createCards());
+        });
     }
 	
 	redirectCardSpecific(id){
