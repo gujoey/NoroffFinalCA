@@ -10,12 +10,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ***
 
 # Install
+
+**Step 1**  
 In order to run this project you will have to have [node.js](https://nodejs.org/en/) installed. You can download it from [here](https://nodejs.org/en/).
 
+**Step 2**  
 Clone this repository and ```cd``` into it through your terminal.
 
+**Step 3**  
 Inside the project root directory, install the project using ```npm install```
 
+**Step 4**   
 After the project is installed you can run ```npm start``` to run the project in development mode.
 If you want to run the project in production mode, use the command ```npm run build```
 
