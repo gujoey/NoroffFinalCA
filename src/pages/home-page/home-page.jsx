@@ -71,16 +71,16 @@ export default class HomePage extends React.Component {
     createCards(){
         const app = this;
 
-		let rickMortyArray;
+		let cardsArr;
 		let search = app.state.cardsSearch;
 		
 		if(!search){
-			rickMortyArray = app.state.cardsObj;
+			cardsArr = app.state.cardsObj;
 		}else{
-			rickMortyArray = app.state.cardsSerachObj;
+			cardsArr = app.state.cardsSerachObj;
 		}
 		
-        rickMortyArray.forEach((value, key) => {
+        cardsArr.forEach((value, key) => {
 			if(value.imageUrl){
 				app.state.cards.push(
 					<HomepageComponent

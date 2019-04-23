@@ -27,7 +27,8 @@ export default class AboutPage extends React.Component {
 		const app = this;
 		if(!app.loggedinValidation()){
 			app.props.history.push("/")
-		} 
+		}
+		app.replaceText();
 	}
 	
 	loggedinValidation(){
@@ -38,6 +39,15 @@ export default class AboutPage extends React.Component {
 		}
 	}
 	
+	replaceText(){
+		let text, newText, aboutText;
+
+		text = document.getElementById("aboutText").innerHTML;
+		newText = text.replace(/Magic/g, "Something");
+		aboutText = document.getElementById("aboutText");
+
+		aboutText.innerHTML = newText;
+	}
 
     render() {
 		let app = this;
