@@ -39,7 +39,7 @@ export default class LoginPage extends React.Component {
     }
 	
 	loggedinValidation(){
-		if (sessionStorage.getItem("AuthToken")){
+		if (sessionStorage.getItem("AuthToken") === "sa6d456sd4a4ad6s"){
 			return true;
 		}
 	}
