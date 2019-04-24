@@ -18,7 +18,7 @@ export default class LoginComponent extends React.Component{
 	handleLoginTermEnter(e){		
 		if (e.keyCode === 13) {
 			const app = this;
-			app.handleLoginTerm()
+			app.handleLoginTerm();
 		}
 	}
 	
