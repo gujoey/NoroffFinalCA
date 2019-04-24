@@ -4,15 +4,22 @@ export default class LoginComponent extends React.Component{
 	constructor(props){
 		super(props);
 		this.handleLoginTerm = this.handleLoginTerm.bind(this);
+		this.handleLoginTermEnter = this.handleLoginTermEnter.bind(this);
 	}
 	
-	handleLoginTerm(){
+	handleLoginTerm(){		
 		const app = this;
-		
 		let username = app.refs.username.value;
 		let password = app.refs.password.value;
-		
+
 		app.props.validateLoginTerm(username, password);
+	}
+	
+	handleLoginTermEnter(e){		
+		if (e.keyCode === 13) {
+			const app = this;
+			app.handleLoginTerm()
+		}
 	}
 	
 	render(){
@@ -23,7 +30,7 @@ export default class LoginComponent extends React.Component{
 				<div className="[ loginComponent__container ]">
 					<h1 className="[ header ]">Please login to access this page</h1>
 					<div className="[ login ]">
-						<form className="[ login__form ]" ref="loginForm">
+						<form className="[ login__form ]" ref="loginForm" onKeyUp={app.handleLoginTermEnter}>
 							<label className="login__label" htmlFor="username">Username</label><br/>
 							<input className="[ login__input ]" type="text" name="username" ref="username" placeholder="Username"/><br />
 							<span className="[ login__error ]">{this.props.usernameErr}</span><br />
